@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="estilos.css">
+    <title>UOL</title>
+</head>
+<body>
+
+    <!-- telaInicio -->
+    <div class="telaInicio">
+        <input type="text" id="nick" name="nick" placeholder="Digite seu nick">
+        <button onclick="logar()">logar</button>
+        <div class="user_invalido_janelinha"></div>
+    </div>
+
+    <!-- carregando -->
+    <div class="carregando display">
+        <div class="status">CARREGANDO, PORFAVOR AGUARDE</div>
+    </div>
+
+    <!--conteudo -->
+    <div class="conteudo display">
+
+        <div class="topo">
+            <a  href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+             <img src="/imagens/logo 1.png"  alt="UOL Logo">
+            </a>
+            <ion-icon onclick="mover_menu_lateral('show')" name="people"></ion-icon>
+        </div>
+
+        <!--mensagem_box -->
+        <div class="mensagem_box">
+        </div>
+
+        <!-- base -->
+        <div class="base">
+            <textarea id="w3review" name="w3review" rows="4" cols="50" placeholder="" required="required"></textarea>
+            <div class="placeholder">
+                Escreva Aqui
+            </div>
+            <ion-icon onclick="enviar_mensagem()" name="paper-plane"></ion-icon>
+        </div>
+        <div class="mensagem_invalida_janelinha"></div>
+
+        <!--menu_lateral -->
+        <div class="menu_lateral">
+            <div class="section_title">Escolha um contato para enviar mensagem:</div>
+            <div class="user_menu">
+
+            </div>
+            <div class="section_title">Escolha a visibilidade:</div>
+            <div class="visibility_menu">
+                <div class="option" onclick="mudar_display(0)" data-identifier="visibility">
+                    <ion-icon name="lock-open"></ion-icon>
+                    <div class="option_content">
+                        <p>livre</p>
+                        <ion-icon name="checkmark-sharp"></ion-icon>
+                    </div>
+                </div>
+                <div class="option" onclick="mudar_display(1)" data-identifier="visibility">
+                    <ion-icon name="lock-closed"></ion-icon>
+                    <div class="option_content">
+                        <p>Privado</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div onclick="mover_menu_lateral('hide')" class="display"></div>
+    </div>
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
